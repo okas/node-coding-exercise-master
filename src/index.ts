@@ -1,17 +1,37 @@
+import { program } from "commander";
 import fs from "fs/promises";
 import fixDuplicatesInVersionsGraph from "schema-cleaner.ts";
 import { KnackApp } from "../types.js";
 
-// TODO:Create CLI support for this script.
 // TODO: add tests.
 
-const inputFileName = "./workbench/mock_application.json";
-const outputFileName = "./workbench/clean_application.json.json";
+const defaultInputFile = "./workbench/mock_application.json";
+const defaultOutPutFile = "./workbench/clean_application.json";
 
-const rawSchema: KnackApp = JSON.parse(
-  await fs.readFile(inputFileName, "utf-8")
-);
+program
+  .name(process.env.npm_package_name ?? "")
+  .version(process.env.npm_package_version ?? "")
+  .description(process.env.npm_package_name ?? "");
+
+program
+  .option("-i, --input <input>", "input file path", defaultInputFile)
+  .option("-o, --output <output>", "output file path", defaultOutPutFile);
+
+program.parse();
+
+const options = program.opts();
+
+const rawSchema: KnackApp = await readSchemaAsJsonFromFile(options.input);
 
 const cleanedSchema = fixDuplicatesInVersionsGraph(rawSchema);
 
-await fs.writeFile(outputFileName, JSON.stringify(cleanedSchema, null, 2));
+await saveSchemaToJsonFile(cleanedSchema, options.output);
+//
+
+async function readSchemaAsJsonFromFile(inputFile: string): Promise<KnackApp> {
+  return JSON.parse(await fs.readFile(inputFile, "utf-8"));
+}
+
+async function saveSchemaToJsonFile(data: KnackApp, outputFile: string) {
+  await fs.writeFile(outputFile, JSON.stringify(data, null, 2));
+}
