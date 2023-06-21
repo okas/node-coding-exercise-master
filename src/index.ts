@@ -1,11 +1,17 @@
-import { cleanupVersions } from "schema-cleaner.ts";
-import { VersionItem } from "../types.js";
-import schema from "../workbench/mock_application.json" assert { type: "json" };
+import fs from "fs/promises";
+import fixDuplicatesInVersionsGraph from "schema-cleaner.ts";
+import { KnackApp } from "../types.js";
 
-const { log } = console;
+// TODO:Create CLI support for this script.
+// TODO: add tests.
 
-const cleanedVersions: Array<VersionItem> = cleanupVersions(schema.versions);
+const inputFileName = "./workbench/mock_application.json";
+const outputFileName = "./workbench/clean_application.json.json";
 
-const cleanedVersions: Set<VersionItem> = cleanupVersions(schema.versions);
+const rawSchema: KnackApp = JSON.parse(
+  await fs.readFile(inputFileName, "utf-8")
+);
 
-log(cleanedVersions);
+const cleanedSchema = fixDuplicatesInVersionsGraph(rawSchema);
+
+await fs.writeFile(outputFileName, JSON.stringify(cleanedSchema, null, 2));

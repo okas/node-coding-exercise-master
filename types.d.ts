@@ -11,3 +11,8 @@ export interface ObjectItem extends IKey {
 export interface VersionItem {
   objects: Array<ObjectItem>;
 }
+
+export interface KnackApp {
+  versions: Array<VersionItem>;
+  [key: string]: any;
+}

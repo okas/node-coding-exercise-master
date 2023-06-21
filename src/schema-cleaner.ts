@@ -1,5 +1,15 @@
-import { FieldItem, ObjectItem, VersionItem } from "../types.ts";
+import { FieldItem, KnackApp, ObjectItem, VersionItem } from "../types.ts";
 import { groupByToMap } from "./utils/array-helpers.ts";
+
+export default function fixDuplicatesInVersionsGraph(
+  inputSchema: KnackApp
+): KnackApp {
+  const deepClonedSchema = JSON.parse(JSON.stringify(inputSchema)) as KnackApp;
+
+  deepClonedSchema.versions = cleanupVersions(deepClonedSchema.versions);
+
+  return deepClonedSchema;
+}
 
 export function cleanupVersions(
   versionsToAnalyze: Array<VersionItem>
