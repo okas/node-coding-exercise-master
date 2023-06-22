@@ -4,6 +4,7 @@ import type {
   ObjectItem,
   VersionItem,
 } from "../types/types.d.ts";
+import * as thisModule from "./schema-cleaner.ts";
 import { groupByToMap } from "./utils/array-helpers.ts";
 
 /**
@@ -17,7 +18,9 @@ export default function fixDuplicatesInVersionsGraph(
 ): KnackApp {
   const deepClonedSchema = JSON.parse(JSON.stringify(inputSchema)) as KnackApp;
 
-  deepClonedSchema.versions = cleanupVersions(deepClonedSchema.versions);
+  deepClonedSchema.versions = thisModule.cleanupVersions(
+    deepClonedSchema.versions
+  );
 
   return deepClonedSchema;
 }
@@ -34,7 +37,7 @@ export function cleanupVersions(
   versionsToAnalyze.forEach((versionItem) => {
     const { objects: rawObjects, ...rest } = versionItem;
 
-    const uniqueObjects = cleanupObjects(rawObjects);
+    const uniqueObjects = thisModule.cleanupObjects(rawObjects);
 
     versionAccumulator.push({ ...rest, objects: [...uniqueObjects] });
   });
@@ -56,7 +59,7 @@ export function cleanupObjects(
   groupedObjects.forEach((objects, objGroupKey) => {
     const { fields: rawFields, ...rest } = objects[0];
 
-    const cleanedFields = cleanupFields(rawFields);
+    const cleanedFields = thisModule.cleanupFields(rawFields);
 
     objectAccumulator.push({ ...rest, fields: [...cleanedFields] });
   });
