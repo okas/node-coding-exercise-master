@@ -10,8 +10,8 @@ import { groupByToMap } from "./utils/array-helpers.ts";
 /**
  * Removes duplicate objects and fields from the Knack application schema, from version property only.
  * Will not change the input schema.
- * @param inputSchema Knack application schema to be cleaned.
- * @returns Deep-cloned Knack application schema without duplicate objects and fields.
+ * @param {KnackApp} inputSchema - Knack application schema to be cleaned.
+ * @returns {KnackApp} - Deep-cloned Knack application schema without duplicate objects and fields.
  */
 export default function fixDuplicatesInVersionsGraph(
   inputSchema: KnackApp
@@ -27,7 +27,8 @@ export default function fixDuplicatesInVersionsGraph(
 
 /**
  * Returns a new (shallow) array of versions without duplicate objects and fields.
- * @param versionsToAnalyze
+ * @param {Array<VersionItem>} versionsToAnalyze
+ * @returns {Array<VersionItem>} - Array of versions without duplicate objects and fields.
  */
 export function cleanupVersions(
   versionsToAnalyze: Array<VersionItem>
@@ -47,7 +48,8 @@ export function cleanupVersions(
 
 /**
  * Returns a new (shallow) array of objects without duplicate fields.
- * @param rawObjects
+ * @param {Array<ObjectItem>} rawObjects
+ * @returns {Array<ObjectItem>} - Array of versions without duplicate objects and fields.
  */
 export function cleanupObjects(
   rawObjects: Array<ObjectItem>
@@ -69,7 +71,8 @@ export function cleanupObjects(
 
 /**
  * Returns a new (shallow) array of fields without duplicates.
- * @param rawFields
+ * @param {Array<FieldItem>} rawFields
+ * @returns {Array<FieldItem>} - Array of fields without duplicates.
  */
 export function cleanupFields(rawFields: Array<FieldItem>): Array<FieldItem> {
   const fieldAccumulator = [] as Array<FieldItem>;
