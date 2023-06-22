@@ -3,7 +3,7 @@ import type {
   KnackApp,
   ObjectItem,
   VersionItem,
-} from "../types/types.ts";
+} from "../types/types.d.ts";
 import { groupByToMap } from "./utils/array-helpers.ts";
 
 /**

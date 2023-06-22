@@ -2,17 +2,16 @@ export interface IKey {
   key: string;
 }
 
-export interface FieldItem extends IKey {}
+export interface FieldItem extends IKey, Record<string | number, unknown> {}
 
-export interface ObjectItem extends IKey {
-  fields: Array<IKey>;
+export interface ObjectItem extends IKey, Record<string | number, unknown> {
+  fields: Array<FieldItem>;
 }
 
-export interface VersionItem {
+export interface VersionItem extends Record<string | number, unknown> {
   objects: Array<ObjectItem>;
 }
 
-export interface KnackApp {
+export interface KnackApp extends Record<string | number, unknown> {
   versions: Array<VersionItem>;
-  [key: string]: any;
 }
