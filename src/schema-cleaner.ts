@@ -1,4 +1,4 @@
-import {
+import type {
   FieldItem,
   KnackApp,
   ObjectItem,
@@ -6,6 +6,12 @@ import {
 } from "../types/types.ts";
 import { groupByToMap } from "./utils/array-helpers.ts";
 
+/**
+ * Removes duplicate objects and fields from the Knack application schema, from version property only.
+ * Will not change the input schema.
+ * @param inputSchema Knack application schema to be cleaned.
+ * @returns Deep-cloned Knack application schema without duplicate objects and fields.
+ */
 export default function fixDuplicatesInVersionsGraph(
   inputSchema: KnackApp
 ): KnackApp {
@@ -16,6 +22,10 @@ export default function fixDuplicatesInVersionsGraph(
   return deepClonedSchema;
 }
 
+/**
+ * Returns a new (shallow) array of versions without duplicate objects and fields.
+ * @param versionsToAnalyze
+ */
 export function cleanupVersions(
   versionsToAnalyze: Array<VersionItem>
 ): Array<VersionItem> {
@@ -32,6 +42,10 @@ export function cleanupVersions(
   return versionAccumulator;
 }
 
+/**
+ * Returns a new (shallow) array of objects without duplicate fields.
+ * @param rawObjects
+ */
 export function cleanupObjects(
   rawObjects: Array<ObjectItem>
 ): Array<ObjectItem> {
@@ -50,6 +64,10 @@ export function cleanupObjects(
   return objectAccumulator;
 }
 
+/**
+ * Returns a new (shallow) array of fields without duplicates.
+ * @param rawFields
+ */
 export function cleanupFields(rawFields: Array<FieldItem>): Array<FieldItem> {
   const fieldAccumulator = [] as Array<FieldItem>;
 
