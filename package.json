@@ -10,6 +10,7 @@
   "type": "module",
   "author": "Lauri Saar",
   "license": "ISC",
+  "types": "types/types.d.ts",
   "dependencies": {
     "commander": "^11.0.0",
     "tsx": "^3.12.7",

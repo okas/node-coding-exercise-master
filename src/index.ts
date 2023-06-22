@@ -1,7 +1,7 @@
 import { program } from "commander";
 import fs from "fs/promises";
 import fixDuplicatesInVersionsGraph from "schema-cleaner.ts";
-import { KnackApp } from "../types.js";
+import { KnackApp } from "../types/types.ts";
 
 // TODO: add tests.
 

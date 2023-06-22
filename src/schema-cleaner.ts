@@ -1,4 +1,9 @@
-import { FieldItem, KnackApp, ObjectItem, VersionItem } from "../types.ts";
+import {
+  FieldItem,
+  KnackApp,
+  ObjectItem,
+  VersionItem,
+} from "../types/types.ts";
 import { groupByToMap } from "./utils/array-helpers.ts";
 
 export default function fixDuplicatesInVersionsGraph(
