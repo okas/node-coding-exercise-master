@@ -9,7 +9,7 @@
 - [cleanupFields](src_schema_cleaner.md#cleanupfields)
 - [cleanupObjects](src_schema_cleaner.md#cleanupobjects)
 - [cleanupVersions](src_schema_cleaner.md#cleanupversions)
-- [default](src_schema_cleaner.md#default)
+- [fixDuplicatesInVersionsGraph](src_schema_cleaner.md#fixduplicatesinversionsgraph)
 
 ## Functions
 
@@ -33,7 +33,7 @@ Returns a new (shallow) array of fields without duplicates.
 
 #### Defined in
 
-[src/schema-cleaner.ts:77](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/schema-cleaner.ts#L77)
+[src/schema-cleaner.ts:77](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/schema-cleaner.ts#L77)
 
 ___
 
@@ -57,7 +57,7 @@ Returns a new (shallow) array of objects without duplicate fields.
 
 #### Defined in
 
-[src/schema-cleaner.ts:54](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/schema-cleaner.ts#L54)
+[src/schema-cleaner.ts:54](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/schema-cleaner.ts#L54)
 
 ___
 
@@ -81,13 +81,13 @@ Returns a new (shallow) array of versions without duplicate objects and fields.
 
 #### Defined in
 
-[src/schema-cleaner.ts:33](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/schema-cleaner.ts#L33)
+[src/schema-cleaner.ts:33](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/schema-cleaner.ts#L33)
 
 ___
 
-### default
+### fixDuplicatesInVersionsGraph
 
-▸ **default**(`inputSchema`): [`KnackApp`](../interfaces/types_types.KnackApp.md)
+▸ **fixDuplicatesInVersionsGraph**(`inputSchema`): [`KnackApp`](../interfaces/types_types.KnackApp.md)
 
 Removes duplicate objects and fields from the Knack application schema, from version property only.
 Will not change the input schema.
@@ -106,4 +106,4 @@ Will not change the input schema.
 
 #### Defined in
 
-[src/schema-cleaner.ts:16](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/schema-cleaner.ts#L16)
+[src/schema-cleaner.ts:16](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/schema-cleaner.ts#L16)

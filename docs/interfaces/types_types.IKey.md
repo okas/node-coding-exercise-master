@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[types/types.d.ts:2](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/types/types.d.ts#L2)
+[types/types.d.ts:2](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/types/types.d.ts#L2)

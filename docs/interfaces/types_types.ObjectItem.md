@@ -8,7 +8,7 @@
 
 - [`IKey`](types_types.IKey.md)
 
-- `Record`<`string` \| `number`, `unknown`\>
+- [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )<`string` \| `number`, `unknown`\>
 
   ↳ **`ObjectItem`**
 
@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[types/types.d.ts:8](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/types/types.d.ts#L8)
+[types/types.d.ts:8](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/types/types.d.ts#L8)
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 #### Defined in
 
-[types/types.d.ts:2](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/types/types.d.ts#L2)
+[types/types.d.ts:2](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/types/types.d.ts#L2)

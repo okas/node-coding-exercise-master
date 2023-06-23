@@ -6,7 +6,7 @@
 
 ## Hierarchy
 
-- `Record`<`string` \| `number`, `unknown`\>
+- [`Record`]( https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type )<`string` \| `number`, `unknown`\>
 
   ↳ **`VersionItem`**
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[types/types.d.ts:12](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/types/types.d.ts#L12)
+[types/types.d.ts:12](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/types/types.d.ts#L12)

@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[src/utils/array-helpers.ts:28](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L28)
+[src/utils/array-helpers.ts:28](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L28)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[src/utils/array-helpers.ts:35](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L35)
+[src/utils/array-helpers.ts:35](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L35)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/utils/array-helpers.ts:21](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L21)
+[src/utils/array-helpers.ts:21](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L21)
 
 ___
 
@@ -123,13 +123,13 @@ ___
 
 #### Defined in
 
-[src/utils/array-helpers.ts:3](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L3)
+[src/utils/array-helpers.ts:3](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L3)
 
 ___
 
 ### groupByToMap
 
-▸ **groupByToMap**<`T`, `Q`\>(`array`, `predicate`): `Map`<`Q`, `T`[]\>
+▸ **groupByToMap**<`T`, `Q`\>(`array`, `predicate`): [`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`Q`, `T`[]\>
 
 #### Type parameters
 
@@ -147,11 +147,11 @@ ___
 
 #### Returns
 
-`Map`<`Q`, `T`[]\>
+[`Map`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map )<`Q`, `T`[]\>
 
 #### Defined in
 
-[src/utils/array-helpers.ts:10](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L10)
+[src/utils/array-helpers.ts:10](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L10)
 
 ___
 
@@ -179,13 +179,13 @@ ___
 
 #### Defined in
 
-[src/utils/array-helpers.ts:79](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L79)
+[src/utils/array-helpers.ts:79](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L79)
 
 ___
 
 ### toBuckets
 
-▸ **toBuckets**<`T`\>(`array`, `size`): `Generator`<`T`[]\>
+▸ **toBuckets**<`T`\>(`array`, `size`): [`Generator`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator )<`T`[]\>
 
 #### Type parameters
 
@@ -202,11 +202,11 @@ ___
 
 #### Returns
 
-`Generator`<`T`[]\>
+[`Generator`]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator )<`T`[]\>
 
 #### Defined in
 
-[src/utils/array-helpers.ts:42](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L42)
+[src/utils/array-helpers.ts:42](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L42)
 
 ___
 
@@ -234,4 +234,4 @@ ___
 
 #### Defined in
 
-[src/utils/array-helpers.ts:62](https://github.com/okas/node-coding-exercise-master/blob/06b0c67/src/utils/array-helpers.ts#L62)
+[src/utils/array-helpers.ts:62](https://github.com/okas/node-coding-exercise-master/blob/cfe0ead/src/utils/array-helpers.ts#L62)
